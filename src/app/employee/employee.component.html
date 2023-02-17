@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="d-flex gap-4 justify-content-between">
+    <h1 class="text-center my-3"> Employee Data </h1>
+    <div class="my-3">
+      <h3> Filter By</h3>
+      <button class="btn btn-primary" (click)="sortData()">Asc</button>&nbsp; <button class="btn btn-success"
+        (click)="DescSort()">Dec</button>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th *ngFor="let keydata of key">{{keydata}}</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ans of Datavalue  ">
+        <th scope="row">{{ans.id}}</th>
+        <td>{{ans.employee_name}}</td>
+        <td>{{ans.employee_salary}}</td>
+        <td>{{ans.employee_age}}</td>
+        <td>{{ans.employee_profile}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
